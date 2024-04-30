@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/blankFragment">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_category"
         android:name="com.example.shoppingapplication.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_category"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_nav_home_to_detailFragment"
@@ -22,11 +22,11 @@
         tools:layout="@layout/fragment_gallery" >
         <action
             android:id="@+id/action_nav_gallery_to_listFragment"
-            app:destination="@id/listFragment" />
+            app:destination="@id/nav_listFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_history"
         android:name="com.example.shoppingapplication.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
@@ -36,13 +36,18 @@
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
     <fragment
-        android:id="@+id/listFragment"
+        android:id="@+id/nav_listFragment"
         android:name="com.example.shoppingapplication.ListFragment"
         android:label="List Fragment"
         tools:layout="@layout/fragment_list" />
     <fragment
-        android:id="@+id/nav_category"
+        android:id="@+id/nav_cart"
         android:name="com.example.shoppingapplication.CategoryFragment"
         android:label="Category"
         tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.shoppingapplication.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" />
 </navigation>

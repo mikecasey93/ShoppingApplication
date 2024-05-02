@@ -1,102 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment"
+    tools:context=".ui.category.CategoryNewFragment"
     android:background="@drawable/gradient">
-
-    <GridLayout
+    
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/gridLayout"
-        android:layout_marginTop="150dp"
-        android:columnCount="2"
-        android:rowCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            style="@style/card_style">
-            <ImageView
-                style="@style/image_box"
-                android:src="@mipmap/apple_icon"
-                android:id="@+id/img_view"/>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gridLayout"
+            android:columnCount="2"
+            android:rowCount="4">
 
-            <TextView
-                style="@style/cat_text_style"
-                android:text="Fruits" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/fruits">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@mipmap/apple_icon"/>
 
-        <androidx.cardview.widget.CardView
-            style="@style/card_style">
-            <ImageView
-                style="@style/image_box"
-                android:src="@mipmap/ic_meat"
-                android:id="@+id/img_view2"/>
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Fruits" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                style="@style/cat_text_style"
-                android:text="Meat" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/meat">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@mipmap/ic_meat"/>
 
-        <androidx.cardview.widget.CardView
-            style="@style/card_style">
-            <ImageView
-                style="@style/image_box"
-                android:src="@mipmap/ic_milk"
-                android:id="@+id/img_view3"/>
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Meat" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                style="@style/cat_text_style"
-                android:text="Dairy"
-                android:layout_marginTop="20dp"/>
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/dairy">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@mipmap/ic_milk"/>
 
-        <androidx.cardview.widget.CardView
-            style="@style/card_style">
-            <ImageView
-                style="@style/image_box"
-                android:src="@mipmap/ic_bread"
-                android:id="@+id/img_view4"/>
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Dairy"
+                    android:layout_marginTop="20dp"/>
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                style="@style/cat_text_style"
-                android:text="Bread"
-                android:layout_marginTop="20dp"/>
-       </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/bread">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@mipmap/ic_bread"/>
 
-        <androidx.cardview.widget.CardView
-            style="@style/card_style">
-            <ImageView
-                style="@style/image_box"
-                android:src="@mipmap/ic_veggies"
-                android:id="@+id/img_view5"/>
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Bread"
+                    android:layout_marginTop="20dp"/>
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                style="@style/cat_text_style"
-                android:text="Vegetables"
-                android:layout_marginTop="20dp"/>
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/vegetables">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@mipmap/ic_veggies"/>
 
-        <androidx.cardview.widget.CardView
-            style="@style/card_style">
-            <ImageView
-                style="@style/image_box"
-                android:src="@mipmap/ic_drinks"
-                android:id="@+id/img_view6"/>
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Vegetables"
+                    android:layout_marginTop="20dp"/>
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                style="@style/cat_text_style"
-                android:text="Beverages"
-                android:layout_marginTop="20dp"/>
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/beverages">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@mipmap/ic_drinks"/>
+
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Beverages"
+                    android:layout_marginTop="20dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/frozen_food">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@drawable/frozen_food"/>
+
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Frozen Food"
+                    android:layout_marginTop="20dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                style="@style/card_style"
+                android:id="@+id/sauces">
+                <ImageView
+                    style="@style/image_box"
+                    android:src="@drawable/sauces"/>
+
+                <TextView
+                    style="@style/cat_text_style"
+                    android:text="Sauces"
+                    android:layout_marginTop="20dp"/>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </ScrollView>
 
 
-    </GridLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

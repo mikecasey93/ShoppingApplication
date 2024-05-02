@@ -1,4 +1,4 @@
-package com.example.shoppingapplication.ui.gallery
+package com.example.shoppingapplication.ui.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.shoppingapplication.R
 import com.example.shoppingapplication.databinding.FragmentGalleryBinding
 
-class GalleryFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
     private var _binding: FragmentGalleryBinding? = null
 
@@ -25,18 +25,18 @@ class GalleryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+            ViewModelProvider(this).get(SettingsViewModel::class.java)
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        textView.setOnClickListener {
-            findNavController().navigate(R.id.action_nav_gallery_to_listFragment)
-        }
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.textGallery
+//        textView.setOnClickListener {
+//            findNavController().navigate(R.id.action_nav_category_to_nav_listFragment)
+//        }
+//        galleryViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
         return root
     }
 
